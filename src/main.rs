@@ -1,6 +1,5 @@
 use std::env;
 use std::fs;
-use inquire::Text;
 use inquire::Select;
 
 #[derive(Debug, Clone, PartialEq)]
@@ -77,6 +76,13 @@ fn main() {
     let contents = fs::read_to_string(file_path).expect("Should have been able to read the file");
 
     let datanew = parser(contents).unwrap();
+
+    let total_question = datanew.len();
+
+    let mut correct_question = 0;
+
+    let mut wrong_question = 0;
+
     println!("{:?},", datanew);
 
     for i in datanew {
@@ -85,14 +91,23 @@ fn main() {
         match ans {
             Ok(choice) => {
                 if choice == i.right_option {
+                    correct_question += 1;
                     println!("Correct Answer: {}", choice);
                 } else {
+                    wrong_question += 1;
                     println!("Wrong Answer: {}", choice);
                 }
             }
             Err(_) => println!("There was an error, please try again"),
         }
     }
+
+    println!(
+        "Total Questions, {} \nCorrect Answers: {} \nWrong Answers {}",
+        total_question,
+        correct_question,
+        wrong_question
+    )
 
     // println!("With text:\n{contents}");
 }
