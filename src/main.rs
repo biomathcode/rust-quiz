@@ -23,9 +23,9 @@ fn parser(content: String) -> Result<Vec<Data>, &'static str> {
     for i in contentlist {
         let question_match = i.starts_with("--");
 
-        let option_match = i.starts_with("[ ]");
+        let option_match = i.starts_with("- [ ]");
 
-        let right_option = i.starts_with("[X]");
+        let right_option = i.starts_with("- [x]");
 
         if question_match {
             prevquestion = i.to_owned();

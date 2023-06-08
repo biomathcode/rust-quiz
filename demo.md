@@ -1,22 +1,25 @@
--- This is the question
+--  What is Rust?
 
-[ ] apple
-[X] banana
-[ ] mango
+- [x] A systems programming language
+- [ ] A scripting language
+- [ ] A markup language
+- [ ] A database management system
 
--- This is the second question
 
-[ ] Option one
+-- From which source file does the Rust compiler start?
 
-[ ] option two
 
-[X] Option three
+- [ ] crate root
+
+- [ ] cargo root
+
+- [x] root
 
 -- This is the third question
 
-[ ] Option third
+- [ ] Option third
 
-[ ] option third
+- [ ] option third
 
-[X] Option third
+- [x] Option third
 
