@@ -83,8 +83,6 @@ fn main() {
 
     let mut wrong_question = 0;
 
-    println!("{:?},", datanew);
-
     for i in datanew {
         let ans = Select::new(&i.question.to_string(), i.options).prompt();
 
