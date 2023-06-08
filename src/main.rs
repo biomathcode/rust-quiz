@@ -101,7 +101,7 @@ fn main() {
     }
 
     println!(
-        "Total Questions, {} \nCorrect Answers: {} \nWrong Answers {}",
+        "\n \nTotal Questions: {} \nCorrect Answers: {} \nWrong Answers {}\n\n ",
         total_question,
         correct_question,
         wrong_question
