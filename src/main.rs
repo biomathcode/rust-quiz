@@ -48,10 +48,10 @@ fn parser(content: String) -> Result<Vec<Data>, &'static str> {
                 .unwrap()
                 .options.clone();
 
-            old_vec.push(i.to_string());
+            old_vec.push(i[5..].to_string());
 
             if right_option {
-                right_ = i.to_string();
+                right_ = i[5..].to_string();
             }
 
             let newvalue = Data {
